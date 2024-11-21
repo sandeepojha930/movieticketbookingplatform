@@ -1,0 +1,18 @@
+apiVersion: monitoring.googleapis.com/v1
+kind: Monitoring
+metadata:
+  name: movie-ticket-booking-monitoring
+spec:
+  type: "custom.googleapis.com"
+  metricDescriptors:
+  - name: "custom.googleapis.com/movie_ticket_booking/availability"
+    type: "gauge"
+    labels:
+    - key: "instance_id"
+      valueType: "STRING"
+      description: "Instance ID"
+    metricKind: "GAUGE"
+    valueType: "DOUBLE"
+    unit: "1"
+    description: "Availability of the movie ticket booking platform"
+    displayName: "Movie Ticket Booking Availability"
